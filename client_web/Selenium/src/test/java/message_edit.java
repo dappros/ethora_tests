@@ -1,5 +1,8 @@
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class message_edit {
@@ -53,13 +56,13 @@ public class message_edit {
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("email")).clear();
 	    Thread.sleep(1000);
-	    driver.findElement(By.id("email")).sendKeys("baseapp@mailinator.com");
+	    driver.findElement(By.id("email")).sendKeys("dapprosplatform@gmail.com");
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("password")).click();
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("password")).clear();
 	    Thread.sleep(1000);
-	    driver.findElement(By.id("password")).sendKeys("baseapp@mailinator.com");
+	    driver.findElement(By.id("password")).sendKeys("dp@pathak");
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("submitEmail")).click();
 	    System.out.println("Login Sucessfully");
@@ -86,40 +89,30 @@ public class message_edit {
 	    Thread.sleep(4000);
 	    System.out.println("Message sent sucessfully");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[6]/section[1]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[7]/section[1]/div[1]/div[1]/div[1]/div[1]/button[1]")).click();
+ //####################################################################
+	    
+	    List<WebElement> elms1 = driver.findElements(By.xpath("//button[@id='long-button']"));
+	    int lastelmIndex1 = elms1.size();
+	    elms1.get(lastelmIndex1-1).click();
+	    
+	    //################################################################################
 	    Thread.sleep(2000);
 	    
-	   // driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hello I am Alexa'])[3]/following::*[name()='svg'][1]")).click();
-	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Reply'])[1]/following::button[1]")).click();
-	    Thread.sleep(2000);
+	    //click on edit
+	    driver.findElement(By.xpath("//button[normalize-space()='Edit']")).click();
 	    
-	    //driver.findElement(By.xpath("//body/div[4]/div[3]/div[1]/div[1]/div[1]/button[2]")).click();
-	    System.out.println("Click on Edit sucessfully");
+	    driver.findElement(By.xpath("//div[@class='cs-message-input__content-editor-wrapper']")).click();
 	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div[3]/div/div[2]/div/div")).sendKeys("Hello Edited Message");
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/button[1]")).click();
-	    Thread.sleep(4000);
-	    System.out.println("Click on Submit Icon Sucessfully");
+	    driver.findElement(By.xpath("//div[@class='cs-message-input__content-editor-wrapper']")).sendKeys("Hello I am Bot");
 	    
+	    driver.findElement(By.xpath("//button[@class='cs-button cs-button--send']")).click();
+	
+	 //######################################################################################################
+		
+		
+		
+		
 	    
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hello I am Alexa'])[4]/following::*[name()='svg'][1]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Edit'])[1]/following::button[1]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Delete message'])[1]/following::button[1]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.cssSelector("section.cs-message.cs-message--outgoing.cs-message--avatar-spacer.cs-message--single.cs-message--avatar-tr > div.cs-message__content-wrapper > div.cs-message__content > div.cs-message__custom-content > div.MuiBox-root.css-ojqyia > #long-button > svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv > path")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Edit'])[1]/following::button[1]")).click();
-	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::button[1]")).click();
-	    Thread.sleep(4000);
 
 		driver.close();
 

@@ -83,8 +83,8 @@ public class sendCoin {
 	    Thread.sleep(6000);
 	    
 	    driver.get("https://ethora.ethoradev.com/chat/d5a107d9ff3892558278d8fa0da052e8fa1bb8a876c72052ddc074a2b0053ab8");
-	    Thread.sleep(8000);
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[24]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
+	    Thread.sleep(12000);
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[34]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
 	   
 	     Thread.sleep(6000);
 	    System.out.println("Click on Three Dot sucessfully");
@@ -92,7 +92,7 @@ public class sendCoin {
 	    Thread.sleep(6000);
 	    System.out.println("Click on Coin successfully");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[24]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[34]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
 		Thread.sleep(6000);
 		System.out.println("Click on Three Dot successfully");
 	    
