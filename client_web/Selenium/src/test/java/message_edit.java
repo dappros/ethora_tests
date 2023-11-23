@@ -91,6 +91,8 @@ public class message_edit {
 	    
  //####################################################################
 	    
+ //####################################################################
+	    
 	    List<WebElement> elms1 = driver.findElements(By.xpath("//button[@id='long-button']"));
 	    int lastelmIndex1 = elms1.size();
 	    elms1.get(lastelmIndex1-1).click();
@@ -99,22 +101,20 @@ public class message_edit {
 	    Thread.sleep(2000);
 	    
 	    //click on edit
-	    driver.findElement(By.xpath("//button[normalize-space()='Edit']")).click();
+	    driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/div/div/button[2]")).click();
+	    Thread.sleep(5000);
 	    
-	    driver.findElement(By.xpath("//div[@class='cs-message-input__content-editor-wrapper']")).click();
+	    System.out.println("Click on Edit sucessfully");
+	    
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div/div[3]/div[2]/div[2]/div/div[1]")).sendKeys("Hello I am Bot");
 	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//div[@class='cs-message-input__content-editor-wrapper']")).sendKeys("Hello I am Bot");
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div/div[3]/div[2]/div[3]/button")).click();
+	    Thread.sleep(3000);
 	    
-	    driver.findElement(By.xpath("//button[@class='cs-button cs-button--send']")).click();
+	    System.out.println("Test Completed");
+		
 	
-	 //######################################################################################################
-		
-		
-		
-		
-	    
-
-		driver.close();
+		//driver.close();
 
 	}
 

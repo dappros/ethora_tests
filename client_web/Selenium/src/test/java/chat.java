@@ -96,17 +96,17 @@ public class chat {
 //	    Thread.sleep(12000);
 	    
 	    
-//	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[34]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
-//	    Thread.sleep(6000);
-//	    System.out.println("Click on Three Dot sucessfully");
+		 driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[47]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
+		 Thread.sleep(6000);
+		 System.out.println("Click on Three Dot sucessfully");
 	    
 	    
 	    //####################################################################
 	    
-	    List<WebElement> elms = driver.findElements(By.xpath("//button[@id='long-button']"));
-	    int lastelmIndex = elms.size();
-	    elms.get(lastelmIndex-1).click();
-	    
+//	    List<WebElement> elms = driver.findElements(By.xpath("//button[@id='long-button']"));
+//	    int lastelmIndex = elms.size();
+//	    elms.get(lastelmIndex-1).click();
+//		 System.out.println("Click on Three Dot successfully");
 	///################################################################################
 	    
 	    
@@ -115,7 +115,7 @@ public class chat {
 	    Thread.sleep(6000);
 	    System.out.println("Click on Coin successfully");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[34]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[47]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
 		Thread.sleep(6000);
 		System.out.println("Click on Three Dot successfully");
 	    
@@ -127,7 +127,13 @@ public class chat {
 	    Thread.sleep(4000);
 	    System.out.println("Click on Textbox successfully");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]")).sendKeys("Hello, DM");
+	    
+	    // Click on Text box and Send bitton
+	    driver.findElement(By.xpath("//div[@is='MessageInput']//div//div[@class='cs-message-input']//div[@class='cs-message-input__content-editor']")).sendKeys("QA_Tester_Direct_Message");
+	    Thread.sleep(4000);
+	    driver.findElement(By.xpath("//div[@is='MessageInput']//div//div[@class='cs-message-input']//button[@class='cs-button cs-button--send']")).click();
+	    
+	    
 	    
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//button[@class='cs-button cs-button--send']")).click();
@@ -182,6 +188,30 @@ public class chat {
 	    
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//body/div[4]/div[3]/div[1]/div[1]/button[1]")).click();
+	    
+	    
+	    //Upload
+	    
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/section[1]/button[1]/*[1]")).click();
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/button[1]")).click();
+	    System.out.println("Click on Upload file");
+	    Thread.sleep(2000);
+	    
+	    
+	    Runtime.getRuntime().exec("C://Users//bikas//OneDrive//Desktop//upload.exe" + " " + "C:\\Users\\bikas\\OneDrive\\Desktop\\1.jpeg");
+	    Thread.sleep(4000);
+	    
+	    System.out.println("File is Uploaded Successfully");
+	   
+	    //Menu tab
+	    driver.findElement(By.cssSelector("path")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//body/div[@id='menu-appbar']/div[3]/ul[1]/div[5]/li[3]")).click();
+	    Thread.sleep(2000);
+	    
+	    System.out.println("Test Completed");
 	  
 	    
 		//driver.close();

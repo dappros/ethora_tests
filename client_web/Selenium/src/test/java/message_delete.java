@@ -111,6 +111,8 @@ public class message_delete {
 	    System.out.println("Click on Delete sucessfully");
 	    Thread.sleep(4000);
 	    
+	    System.out.println("Test Completed");
+	    
 	    
 		//driver.close();
 

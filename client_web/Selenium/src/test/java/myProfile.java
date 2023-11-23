@@ -197,26 +197,9 @@ public class myProfile {
 	    
 	   
 	    
-//	    driver.findElement(By.id(":rk:")).click();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rk:")).clear();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rk:")).sendKeys("atom");
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rl:")).click();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rl:")).clear();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rl:")).sendKeys("Owner");
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rm:")).click();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rm:")).clear();
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.id(":rm:")).sendKeys("Description");
 //	    Thread.sleep(2000);
 	 
-	    System.out.println("done");
+	    System.out.println("Test Completed");
 	    
 	    //Capture Full page screenshot
 	    //Convert webdriver object to takeScreenshot interface

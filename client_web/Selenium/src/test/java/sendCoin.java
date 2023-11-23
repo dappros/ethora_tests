@@ -92,25 +92,7 @@ public class sendCoin {
 	    Thread.sleep(6000);
 	    System.out.println("Click on Coin successfully");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[34]/section[1]/div[2]/div[1]/div[1]/div[1]/button[1]")).click();
-		Thread.sleep(6000);
-		System.out.println("Click on Three Dot successfully");
 	    
-	    driver.findElement(By.xpath("//body/div[3]/div[3]/div[1]/div[1]/div[1]/button[1]")).click();
-	    Thread.sleep(6000);
-	    System.out.println("Click on Direct Message sucessfully");
-	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]")).click();
-	    Thread.sleep(4000);
-	    System.out.println("Click on Textbox sucessfully");
-	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[3]/button[1]")).sendKeys("Hello, DM");
-	    
-	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[3]/button[1]")).click();
-	    Thread.sleep(4000);
-	    System.out.println("Message Sent to textbox sucessfully");
-	    Thread.sleep(6000);
 		//driver.close();
 
 	}

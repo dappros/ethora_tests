@@ -39,7 +39,6 @@ public class Message_Reply {
 			driver = new ChromeDriver();
 		}
 
-
 	}
 
 	public static void runTest() throws Throwable {
@@ -78,8 +77,8 @@ public class Message_Reply {
 	    
 	    driver.findElement(By.xpath("//button[@id='official']")).click();
 	    System.out.println("Click on Offical tab sucessfully");
+	   
 	    Thread.sleep(5000);
-	    
 	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Testersss'])[1]/preceding::*[name()='svg'][5]")).click();
 	    Thread.sleep(4000);
 	    
@@ -94,18 +93,7 @@ public class Message_Reply {
 	    
 	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[3]/button[1]")).click();
 	    Thread.sleep(4000);
-	    System.out.println("Message Sent to textbox sucessfully");
-	    
-	    //Click on three Dot
-//	    driver.findElement(By.xpath("(//*[name()='svg'][@class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv'])[22]")).click();
-//	    Thread.sleep(2000);
-//	    driver.switchTo().frame(0);
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.xpath("//div[@class='MuiDialogContent-root css-1ty026z']"));
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.xpath("//button[normalize-space()='Reply']")).click();
-//	    Thread.sleep(2000);
-	    
+	    System.out.println("Message Sent to textbox sucessfully");    
 	    
  //####################################################################
 	    
@@ -150,20 +138,41 @@ public class Message_Reply {
 	    Thread.sleep(2000);
 	    
 	    //click on edit
-	    driver.findElement(By.xpath("//body/div[4]/div[3]/div[1]/div[1]/div[1]/button[2]")).click();
+	    driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/div/div/button[2]")).click();
+	    Thread.sleep(5000);
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]")).click();
+	    System.out.println("Click on Edit sucessfully");
+	    
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div/div[3]/div[2]/div[2]/div/div[1]")).sendKeys("Hello I am Bot");
+	    Thread.sleep(5000);
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div/div[3]/div[2]/div[3]/button")).click();
+	    Thread.sleep(3000);
+	    
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/section[1]/button[1]/*[1]")).click();
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/button[1]")).click();
+	    System.out.println("Click on Upload file");
+	    Thread.sleep(2000);
+	    
+	    
+	    Runtime.getRuntime().exec("C://Users//bikas//OneDrive//Desktop//upload.exe" + " " + "C:\\Users\\bikas\\OneDrive\\Desktop\\1.jpeg");
 	    Thread.sleep(4000);
-	    driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div[3]/div/div[2]/div/div")).sendKeys("Hello I am Bot");
 	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[3]/button[1]")).click();
-	
-	 //  driver.findElement(By.id("file")).clear();
-//	    Thread.sleep(4000);
-//	    driver.findElement(By.id("file")).sendKeys("C:\\fakepath\\pinterestdownloader.com-1697002512.988053.jpg");
-//	    Thread.sleep(4000);
+	    System.out.println("File is Uploaded Successfully");
+	   
+	    //Menu tab
+	    driver.findElement(By.cssSelector("path")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//body/div[@id='menu-appbar']/div[3]/ul[1]/div[5]/li[3]")).click();
+	    Thread.sleep(2000);
+	    
+	   
+	    
 
-		driver.close();
+	    System.out.println("Test Completed");
+
+		//driver.close();
 
 	}
 
