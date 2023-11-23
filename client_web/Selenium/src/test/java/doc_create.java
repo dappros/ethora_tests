@@ -77,13 +77,13 @@ public class doc_create {
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("email")).clear();
 	    Thread.sleep(1000);
-	    driver.findElement(By.id("email")).sendKeys("baseapp@mailinator.com");
+	    driver.findElement(By.id("email")).sendKeys("dapprosplatform@gmail.com");
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("password")).click();
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("password")).clear();
 	    Thread.sleep(1000);
-	    driver.findElement(By.id("password")).sendKeys("baseapp@mailinator.com");
+	    driver.findElement(By.id("password")).sendKeys("dp@pathak");
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("submitEmail")).click();
 	    
@@ -104,7 +104,7 @@ public class doc_create {
 	    System.out.println("Click on Upload file");
 	    Thread.sleep(2000);
 	    
-	    
+	    // Need to Change the path as per system
 	    Runtime.getRuntime().exec("C://Users//bikas//OneDrive//Desktop//upload.exe" + " " + "C:\\Users\\bikas\\OneDrive\\Desktop\\1.jpeg");
 	    Thread.sleep(4000);
 	    
@@ -118,13 +118,17 @@ public class doc_create {
 	    System.out.println("Document name Uploaded");
 	    Thread.sleep(2000);
 	    driver.findElement(By.id("submitUpload")).click();
-	    System.out.println("Click on SubmitUpload");
+	    System.out.println("Click on Create");
 	    Thread.sleep(2000);
 	    driver.findElement(By.cssSelector("path")).click();
 	    Thread.sleep(2000);
+	    
+	    
+	    driver.findElement(By.xpath("//body/div[@id='menu-appbar']/div[3]/ul[1]/div[1]/li[1]")).click();
+	    Thread.sleep(2000);
 
 	    
-
+ 
 	 
 	    System.out.println("done");
 	    
@@ -132,7 +136,7 @@ public class doc_create {
 		
 		
 
-		driver.close();
+		//driver.close();
 
 	}
 

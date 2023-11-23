@@ -90,6 +90,9 @@ public class nft_create {
 	    
 	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]")).click();
 	    Thread.sleep(2000);
+	    
+	    
+	    // Need to Change the path as per system
 	    Runtime.getRuntime().exec("C://Users//bikas//OneDrive//Desktop//upload.exe" + " " + "C:\\Users\\bikas\\OneDrive\\Desktop\\1.jpeg");
 	    Thread.sleep(4000);
 //	    driver.findElement(By.xpath("//input[@id=':r9:']")).click();

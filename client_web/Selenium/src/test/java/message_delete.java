@@ -1,5 +1,8 @@
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class message_delete {
@@ -76,20 +79,39 @@ public class message_delete {
 	    
 	    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Testersss'])[1]/preceding::*[name()='svg'][5]")).click();
 	    Thread.sleep(4000);
+	    
+	    //Send Message
 	    driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/div/div[2]/div/ul/li/div/div[2]/div")).click();
 	    Thread.sleep(4000);
 	    driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div[3]/div/div[2]/div/div")).click();
 	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div[3]/div/div[2]/div/div")).sendKeys("Hello I am Alexa");
+	    Thread.sleep(2000);
 	    
-	    
-	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[6]/section[1]/div[1]/div[1]/div[1]/div[1]/button[1]")).click();
-	    Thread.sleep(3000);
-	    //click on Delete
-	    driver.findElement(By.xpath("//body/div[4]/div[3]/div[1]/div[1]/div[1]/button[3]")).click();
-	    
-	    
-	    System.out.println("Click on Reply sucessfully");
+	    driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[3]/button[1]")).click();
 	    Thread.sleep(4000);
+	    System.out.println("Message Sent to textbox sucessfully");
+	    
+	    //Click on last 3 dot
+	    //##############################################################################33
+	    List<WebElement> elms1 = driver.findElements(By.xpath("//button[@id='long-button']"));
+	    int lastelmIndex1 = elms1.size();
+	    elms1.get(lastelmIndex1-1).click();
+	    
+	    //################################################################################
+	    Thread.sleep(2000);
+	    
+	    //click on Deletes
+	    driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
+	    Thread.sleep(4000);
+	    driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
+	    	  
+	    
+	    
+	    System.out.println("Click on Delete sucessfully");
+	    Thread.sleep(4000);
+	    
+	    System.out.println("Test Completed");
 	    
 	    
 		//driver.close();
